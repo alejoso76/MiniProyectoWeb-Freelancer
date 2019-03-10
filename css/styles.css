@@ -1,0 +1,65 @@
+/*Custom properties, son como variables*/
+:root{
+    --oscuro: #212121;
+}
+
+html{
+    box-sizing: border-box;
+    /*Hace que se estire el gradient y se vea mejor*/
+    min-height: 100%;
+    /**Para dispositivos moviles*/
+    font-size: 62.5%;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body{
+    font-family: 'Krub', sans-serif;
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    /*Hace que se estire el gradient y se vea mejor*/
+    min-height: 100%;
+    /**Para dispositivos moviles*/
+    font-size: 1.6rem;
+}
+
+.site-header{
+    background-color: #ffffff;
+}
+
+.site-header nav{
+    max-width: 1200px;
+    margin: 0 auto;
+    /*rem sirve para ser responsivo, para pantallas con mucha
+    densidad de pixeles*/
+    padding: 2rem 0;
+    /*?El flexbox se aplica al contenedor padre (Flex container)*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 768px){
+    .site-header nav{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.site-header nav a{
+    color: var(--oscuro);
+    font-size: 2.2rem;
+    text-decoration: none;
+    margin-bottom: 2rem;
+}
+
+.site-header nav a:last-of-type{
+    margin-bottom: 0;
+}
+
+@media (min-width: 768px){
+    .site-header nav a{
+        margin-bottom: 0;
+    }
+}
+
